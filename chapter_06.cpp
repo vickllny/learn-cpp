@@ -6,15 +6,22 @@
 //
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 int func1(){
     int a = 10;
     decltype(a) b = 10;
-    decltype(a+3.14) c = 3.14;
+    decltype(a + 3.14) c = 3.14;
     decltype(a + b * 3.14) d = 3.14;
 }
+
+class Test {
+public:
+    string text;
+    static const int value = 100;
+};
 
 int main(){
     int x = 88;
@@ -26,5 +33,9 @@ int main(){
     decltype(y) b = x;
     decltype(x) c = y;
 
+    decltype(Test::value) q = 100;
+
+    Test t;
+    decltype(t.text) w = "20";
 }
 
