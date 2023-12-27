@@ -4,60 +4,38 @@
 
 using namespace std;
 
-//委托构造函数和继承构造函数
-//https://www.bilibili.com/video/BV1bX4y1G7ks/?p=19&spm_id_from=pageDriver&vd_source=240260c8cdca141b2447105a672fe65e
+//列表初始化
+//https://www.bilibili.com/video/BV1bX4y1G7ks/?p=21&spm_id_from=pageDriver&vd_source=240260c8cdca141b2447105a672fe65e
 
-//委托构造函数
-class User {
-public:
-    User(){}
-    explicit User(string user_name) {
-        this->user_name = std::move(user_name);
-    }
+class Person {
+    public:
+        Person(string name): name(name){
+            cout << "name: " << name << endl;
+        }
+        Person(string name, int age): name(name), age(age){
+            cout << "name: " << name << ", age: " << age << endl;
+        }
 
-    User(string user_name, int age): User(std::move(user_name)){
-        this->age = age;
-    }
-
-    User(string user_name, int age, int gender): User(std::move(user_name), age){
-        this->gender = gender;
-    }
-
-    void func(string name){
-        cout << "User->name: " << name << endl;
-    }
-
-    void func(string name, int age){
-        cout << "User->name: " << name << endl;
-        cout << "User->age: " << age << endl;
-    }
-
-    string user_name;
-    int age;
-    int gender;
-};
-
-class StudentUser: public User {
-public:
-    //using 使用
-    using User::User;
-    using User::func;
-    StudentUser(string user_name, int age, int gender, int student_no): User(std::move(user_name), age, gender){
-        this->student_no = student_no;
-    }
-
-    void func(){
-        cout << "StudentUser->null" << endl;
-    }
-private:
-    int student_no{};
+    private:
+        string name;
+        int age;
 };
 
 int main(){
-    User* user = new User("vickllny");
-    StudentUser studentUser("vickllny", 28, 1);
-    studentUser.func();
-    studentUser.func("vickllny");
-    studentUser.func("vickllny", 28);
+    Person p1("vickllny1");
+    string name = "vickllny2";
+    Person p2 = name;
+    Person p3 = {"vickllny3"};
+    Person p4{ "vickllny4" };//初始化列表
+
+    int a1 = { 1314 };//普通变量初始化
+    int a1{ 1314 };
+    int arr1[] = { 1,2,3,4 };
+    int arr2[] = { 1,2,3 };
+
+    int* p = new int{ 520 };
+    double b = double { 250.1314 };
+    int* array = new int[3]{ 1,2,3 };
+
     return 0;
 }
