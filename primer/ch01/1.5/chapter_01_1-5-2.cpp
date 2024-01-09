@@ -24,7 +24,7 @@ int main(){
     //     cout << "isbn => " << it->first << " , count => " << it->second << endl;
     // }
 
-    //1.24 TODO
+    //1.24 1.25
     Sales_item total;
     if(cin >> total){
         Sales_item temp;
@@ -41,5 +41,7 @@ int main(){
         cerr << "No data!?" << endl;
         return -1;
     }
+
+
     return 0;
 }
