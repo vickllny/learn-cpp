@@ -4,6 +4,7 @@
         "map": "cpp",
         "__hash_table": "cpp",
         "__tree": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "iostream": "cpp"
     }
 }
