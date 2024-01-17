@@ -6,8 +6,6 @@ using namespace std;
 //page 45
 //引用
 
-int reuse = 42;
-
 int main(){
     // example
     // int ival = 1024;
