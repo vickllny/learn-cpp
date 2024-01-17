@@ -8,7 +8,12 @@ using namespace std;
 
 
 int main(){
-
+    // 2.26
+    // const int buf; // incorrect  必须初始化
+    // int cnt = 0; // correct
+    // const int sz = cnt; // correct
+    // ++cnt; // correct
+    // ++sz; // incorrect 常量不可修改
 
     return 0;
 }
