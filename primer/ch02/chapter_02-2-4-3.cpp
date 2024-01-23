@@ -12,15 +12,15 @@ int main(){
     // 不可变的指针、算术类型、类 顶层const
     // 可变的或者声明引用的const是底层const
 
-    // int a = 2;
-    // int b = 2;
-    // const int const * const p = &a;
-    // p = &b;
-    // const int c = 22;
-    // const int &c1 = c;
-    // int &c2 = c;
-    // int d = 255;
-    // const int &d1 = d;
+    int a = 2;
+    int b = 2;
+    const int const * const p = &a;
+    p = &b;
+    const int c = 22;
+    const int &c1 = c;
+    int &c2 = c;
+    int d = 255;
+    const int &d1 = d;
 
     // 2.30
     const int v2 = 0; // 顶层,  字面量？
