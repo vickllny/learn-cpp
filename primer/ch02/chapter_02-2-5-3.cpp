@@ -2,10 +2,9 @@
 
 using namespace std;
 
-// 2.5.0
-// page 60
-// 处理类型
-
+// 2.5.3
+// page 62
+// decltype类型指示符
 
 int main(){
     
