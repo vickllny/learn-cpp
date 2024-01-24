@@ -8,6 +8,12 @@ using namespace std;
 
 // const 先看const左边，如果左边没有值，则作用于右边
 
+void foo(const int a){} //顶层const 传参时会被忽略
+void foo(int a){}
+
+void bar(const int *a){} //底层const 不会被忽略不会报编译错误
+void bar(int *a){}
+
 int main(){
     // 不可变的指针、算术类型、类 顶层const
     // 可变的或者声明引用的const是底层const
