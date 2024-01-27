@@ -56,8 +56,8 @@ int main(){
     *ap3 = 23;
     *ap4 = 23;
 
-    int &r = 2;// test
-    
+    int &r = 2;
+
     const int &r1 = 2;
     const int *p1 = &a1;
 
