@@ -25,6 +25,7 @@ int main(){
     while(cin >> s_temp){
         s315.push_back(s_temp);
     }
+    
 
     return 0;
 }
